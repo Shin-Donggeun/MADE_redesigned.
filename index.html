@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>뉴발란스 코리아 - MADE</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+    <nav>
+        <div class="toggle">
+            <img src="img/nb black.png" class="deactivatenb" id="nblogo">
+            <div class="toggle-indicator" id="toggleindicator"></div>
+            <img src="img/made 세로.png" class="made-logo">
+        </div>
+
+        <div class="searchbar">
+            <input type="search" placeholder="검색어를 입력하세요">
+            <img src="img/searchicon.png">
+        </div>
+
+        <div class="navright">
+            <div class="today" id="todayToggle">
+                <div class="today-label">
+                    <p>오늘 본 상품(3)</p>
+                </div>
+                <div class="today-items">
+                    <a href="#">
+                        <div class="item"><img src="img/today1.png"><span>990NV5_250</span></div>
+                    </a>
+                    <a href="#">
+                        <div class="item"><img src="img/today2.png"><span>NBMLE3S011</span></div>
+                    </a>
+                    <a href="#">
+                        <div class="item"><img src="img/today3.png"><span>992GL1_250</span></div>
+                    </a>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="side-nav">
+            <img src="img/D_nav_home.png" alt="홈 아이콘">
+            <img src="img/D_nav_mem.png" alt="멤버 아이콘">
+            <img src="img/D_nav_cal.png" alt="캘린더 아이콘">
+            <img src="img/D_nav_shop.png" alt="쇼핑 아이콘">
+            <img src="img/D_nav_my.png" alt="마이 아이콘">
+            <img src="img/D_nav_.png" alt="기타 아이콘">
+          </div>
+    </nav>
+    <section class="sec1">
+
+    </section>
+
+    <section class="teammade1">
+        <img src="img/made 로고.png">
+        <p>멤버십 인증하기</p>
+    </section>
+    <script>
+        const toggle = document.querySelector('.toggle');
+        const indicator = document.getElementById('toggleindicator');
+        const nbLogo = document.getElementById('nblogo');
+
+        toggle.addEventListener('click', () => {
+            toggle.classList.toggle('toggled');
+            setTimeout(() => {
+                if (toggle.classList.contains('toggled')) {
+                    // remain on current page
+                } else {
+                    window.location.href = "nb_index.html"; // link to your New Balance page
+                }
+            }, 300);
+        });
+
+        const todayToggle = document.getElementById('todayToggle');
+        todayToggle.addEventListener('click', () => {
+            todayToggle.classList.toggle('expanded');
+        });
+    </script>
+</body>
+
+</html>
