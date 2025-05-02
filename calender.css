@@ -538,6 +538,7 @@ button.alertoff {
     box-sizing: border-box;
     transition: transform 0.1s ease;
     color: #fff;
+    cursor: pointer;
 }
 
 button.alerton {
