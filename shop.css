@@ -403,7 +403,6 @@ nav {
     background-color: #CF0C2C;
     border-radius: 999px;
     width: 50px;
-    height: 50px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -429,18 +428,17 @@ nav {
     background-color: rgba(0, 0, 0, 0.4);
     border: 1px solid #a2a2a2;
     border-radius: 999px;
-    padding: 10px;
-    /* color: #fff; */
-    /* font-family: 'Pretendard', sans-serif; */
+    padding: 8px 10px;
+    height: 42px;
     text-decoration: none;
     text-align: center;
     min-width: 45px;
     white-space: nowrap;
-    /* min-width: 60px; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
-.shop-submenu a:nth-child(1) {
-    background-color: #CF0C2C;
-}
+
 
 .side-nav-wrapper {
     position: fixed;
