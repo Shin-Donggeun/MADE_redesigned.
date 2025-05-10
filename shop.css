@@ -118,6 +118,7 @@ nav {
     justify-content: space-between;
     padding: 0 17px;
     z-index: 1000;
+    cursor: pointer;
 }
 
 .toggle img.deactivatenb {
