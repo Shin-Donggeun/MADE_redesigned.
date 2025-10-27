@@ -61,7 +61,7 @@
                 <a href="index.html"><img src="img/D_nav_home.png" alt="홈 아이콘"></a>
                 <a href="member.html"><img src="img/D_nav_mem.png" alt="멤버 아이콘"></a>
                 <a href="calender.html"><img src="img/D_nav_cal.png" alt="캘린더 아이콘"></a>
-                <div class="shop-link">
+                <div class="shop-link active">
                     <a href="shop.html">
                         <img src="img/D_nav_shop.png" alt="쇼핑 아이콘">
                     </a>
@@ -219,8 +219,16 @@
         const toggle = document.querySelector('.toggle');
         const indicator = document.getElementById('toggleindicator');
         const nbLogo = document.getElementById('nblogo');
-        const toggleLogoContainer = document.querySelector('.togglelogo');
-        const toggleLogoImage = document.getElementById('toggleLogoImage');
+    const toggleLogoContainer = document.querySelector('.togglelogo');
+    const toggleLogoImage = document.getElementById('toggleLogoImage');
+
+    if (toggleLogoContainer && toggleLogoImage) {
+        toggleLogoContainer.addEventListener('click', () => {
+            if (toggleLogoImage.src.includes('made_landscape_logo.png')) {
+                window.location.href = 'index.html';
+            }
+        });
+    }
 
         toggle.addEventListener('click', () => {
             toggle.classList.toggle('toggled');

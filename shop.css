@@ -24,7 +24,7 @@ p.d_mainpretendard{
 p.d_textpretendard{
     font-family: 'Pretendard', 'Apple SD Gothic Neo', sans-serif;
     font-weight: 500;
-    font-size: 24px;
+    font-size: 16px;
 }
 
 
@@ -212,7 +212,7 @@ nav {
 }
 
 .searchbar>input::placeholder {
-    font-size: 20px;
+    font-size: 16px;
     font-weight: 300;
     color: #ffffff;
 }
@@ -261,6 +261,7 @@ nav {
     left: calc(46px + 85px + 30px);
     /* toggle 좌표 + 너비 + 간격 */
     z-index: 1000;
+    cursor: pointer;
 }
 
 @media screen and (max-width:920px) {
@@ -320,6 +321,7 @@ nav {
     align-items: center;
     width: fit-content;
     align-self: flex-start;
+    font-size: 16px;
     /* padding: 10px 20px; */
 }
 
@@ -376,7 +378,7 @@ nav {
     -webkit-backdrop-filter: blur(100px);
     border-radius: 999px;
     color: #ffffff;
-    font-size: 24px;
+    font-size: 16px;
     font-weight: 400;
     display: flex;
     align-items: center;
@@ -400,7 +402,7 @@ nav {
     cursor: pointer;
 }
 
-.side-nav>.shop-link a:nth-of-type(1) {
+.side-nav .shop-link > a {
     background-color: #CF0C2C;
     border-radius: 999px;
     width: 50px;
@@ -418,29 +420,6 @@ nav {
     transform: scale(1.2);
 }
 
-.shop-submenu {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    z-index: 1000;
-}
-
-.shop-submenu a {
-    background-color: rgba(0, 0, 0, 0.4);
-    border: 1px solid #a2a2a2;
-    border-radius: 999px;
-    padding: 8px 10px;
-    height: 42px;
-    text-decoration: none;
-    text-align: center;
-    min-width: 45px;
-    white-space: nowrap;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-
 .side-nav-wrapper {
     position: fixed;
     left: 46px;
@@ -452,20 +431,64 @@ nav {
     z-index: 1000;
 }
 
-
-
 .shop-link {
     position: relative;
+    display: flex;
+    align-items: center;
 }
 
-.shop-link .shop-submenu {
+.shop-link::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 100%;
+    width: 24px;
+}
+
+.shop-link > a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.shop-submenu {
     position: absolute;
     left: calc(100% + 20px);
     top: 50%;
     transform: translateY(-50%);
+    display: flex;
     flex-direction: column;
     gap: 20px;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.2s ease;
     z-index: 1000;
+}
+
+.shop-submenu a {
+    background-color: rgba(0, 0, 0, 0.4);
+    border: 1px solid #a2a2a2;
+    border-radius: 999px;
+    padding: 8px 12px;
+    height: 42px;
+    font-family: 'Pretendard', Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    text-decoration: none;
+    text-align: center;
+    min-width: 60px;
+    color: #ffffff;
+    white-space: nowrap;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.shop-link:hover .shop-submenu,
+.shop-link:focus-within .shop-submenu,
+.shop-link.active .shop-submenu {
+    opacity: 1;
+    pointer-events: auto;
 }
 
 /* 이하 섹션 */
@@ -639,4 +662,3 @@ footer {
     display: flex;
     align-items: center;
 }
-

@@ -60,7 +60,15 @@
             <a href="index.html"><img src="img/D_nav_home.png" alt="홈 아이콘"></a>
             <a href="member.html"><img src="img/D_nav_mem.png" alt="멤버 아이콘"></a>
             <a href="calender.html"><img src="img/D_nav_cal.png" alt="캘린더 아이콘"></a>
-            <a href="shop.html"><img src="img/D_nav_shop.png" alt="쇼핑 아이콘"></a>
+            <div class="shop-link">
+                <a href="shop.html"><img src="img/D_nav_shop.png" alt="쇼핑 아이콘"></a>
+                <div class="shop-submenu">
+                    <a href="shop.html">신발</a>
+                    <a href="clothes.html">의류</a>
+                    <a href="#">Acc</a>
+                    <a href="#">키즈</a>
+                </div>
+            </div>
             <a href="mypage.html"><img src="img/D_nav_my.png" alt="마이 아이콘"></a>
             <a href="bag.html"><img src="img/D_nav_bag.png" alt="장바구니 아이콘"></a>
         </div>
@@ -322,6 +330,15 @@
     <script>
         const toggle = document.querySelector('.toggle');
         const toggleLogoImage = document.getElementById('toggleLogoImage');
+        const toggleLogoContainer = document.querySelector('.togglelogo');
+
+        if (toggleLogoContainer && toggleLogoImage) {
+            toggleLogoContainer.addEventListener('click', () => {
+                if (toggleLogoImage.src.includes('made_landscape_logo.png')) {
+                    window.location.href = 'index.html';
+                }
+            });
+        }
 
         // 페이지 로드 시: URL 기준 토글 상태 설정
         document.addEventListener('DOMContentLoaded', () => {

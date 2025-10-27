@@ -189,8 +189,16 @@
         const toggle = document.querySelector('.toggle');
         const indicator = document.getElementById('toggleindicator');
         const nbLogo = document.getElementById('nblogo');
-        const toggleLogoContainer = document.querySelector('.togglelogo');
-        const toggleLogoImage = document.getElementById('toggleLogoImage');
+    const toggleLogoContainer = document.querySelector('.togglelogo');
+    const toggleLogoImage = document.getElementById('toggleLogoImage');
+
+    if (toggleLogoContainer && toggleLogoImage) {
+        toggleLogoContainer.addEventListener('click', () => {
+            if (toggleLogoImage.src.includes('made_landscape_logo.png')) {
+                window.location.href = 'index.html';
+            }
+        });
+    }
 
         toggle.addEventListener('click', () => {
             toggle.classList.toggle('toggled');

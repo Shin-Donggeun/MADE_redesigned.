@@ -27,7 +27,7 @@ p.d_mainpretendard {
 p.d_textpretendard {
     font-family: 'Pretendard', 'Apple SD Gothic Neo', sans-serif;
     font-weight: 500;
-    font-size: 24px;
+    font-size: 16px;
 }
 
 
@@ -216,7 +216,7 @@ nav {
 }
 
 .searchbar>input::placeholder {
-    font-size: 20px;
+    font-size: 16px;
     font-weight: 300;
     color: #ffffff;
 }
@@ -265,6 +265,7 @@ nav {
     left: calc(46px + 85px + 30px);
     /* toggle 좌표 + 너비 + 간격 */
     z-index: 1000;
+    cursor: pointer;
 }
 
 @media screen and (max-width:920px) {
@@ -324,6 +325,7 @@ nav {
     align-items: center;
     width: fit-content;
     align-self: flex-start;
+    font-size: 16px;
     /* padding: 10px 20px; */
 }
 
@@ -380,7 +382,7 @@ nav {
     -webkit-backdrop-filter: blur(100px);
     border-radius: 999px;
     color: #ffffff;
-    font-size: 24px;
+    font-size: 16px;
     font-weight: 400;
     display: flex;
     align-items: center;
@@ -424,34 +426,6 @@ nav {
     justify-content: center;
 }
 
-/* shop-submenu styles */
-.shop-submenu {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    position: absolute;
-    left: calc(100% + 10px);
-    top: 50%;
-    transform: translateY(-50%);
-    z-index: 1000;
-}
-
-.shop-submenu a {
-    background-color: rgba(0, 0, 0, 0.4);
-    border: 1px solid #a2a2a2;
-    border-radius: 999px;
-    padding: 10px;
-    text-decoration: none;
-    text-align: center;
-    min-width: 45px;
-    width: 80px;
-    white-space: nowrap;
-}
-
-.shop-submenu a:nth-child(1) {
-    background-color: #CF0C2C;
-}
-
 .side-nav-wrapper {
     position: fixed;
     left: 46px;
@@ -463,19 +437,47 @@ nav {
     z-index: 1000;
 }
 
-
 .shop-link {
     position: relative;
+    display: flex;
+    align-items: center;
 }
 
-.shop-link .shop-submenu {
+.shop-link > a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* shop-submenu styles */
+.shop-submenu {
     position: absolute;
     left: calc(100% + 20px);
     top: 10%;
     transform: translateY(-90%);
+    display: flex;
     flex-direction: column;
     gap: 20px;
     z-index: 1000;
+}
+
+.shop-submenu a {
+    background-color: rgba(0, 0, 0, 0.4);
+    border: 1px solid #a2a2a2;
+    border-radius: 999px;
+    padding: 10px;
+    text-decoration: none;
+    text-align: center;
+    min-width: 60px;
+    color: #ffffff;
+    white-space: nowrap;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.shop-submenu a:nth-child(1) {
+    background-color: #CF0C2C;
 }
 
 /* 이하 섹션 */
